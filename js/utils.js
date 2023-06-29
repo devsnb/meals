@@ -71,3 +71,27 @@ export const createMealCard = (meal, currentFavs) => {
 
 	return div
 }
+
+/**
+ * creates the meals section for the meals details page
+ * @param meal the meal object
+ * @returns the div containing the meals section
+ */
+export const createMealsSection = meal => {
+	const div = document.createElement('div')
+	div.classList.add('container')
+	div.classList.add('meal')
+
+	div.innerHTML = `
+    <img src="${meal.strMealThumb}">
+
+    <div>
+      <h1>${meal.strMeal}</h1>
+      <h4>${meal.strCategory}</h4>
+      <p>${meal.strInstructions}</p>
+    </div>
+
+  `
+
+	return div
+}

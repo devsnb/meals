@@ -1,0 +1,36 @@
+.meal {
+  display: flex;
+  /* flex-direction: column; */
+  color: hsl(346, 65%, 42%);
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.meal>img {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meal>div {
+  padding: 1.5rem;
+}
+
+.meal>div>h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.meal>div>h4 {
+  font-size: 1.2rem;
+}
+
+.meal>div>p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  word-spacing: 3px;
+}
