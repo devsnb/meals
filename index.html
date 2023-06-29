@@ -3,8 +3,50 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="./css/common.css" />
+		<link rel="stylesheet" href="./css/home.css" />
 		<title>Meals | Home</title>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header-content">
+					<h1>Meals</h1>
+					<nav id="main-nav">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="./favourites.html">Favorites</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="search">
+				<div class="container">
+					<form id="search-form" class="search-content">
+						<label for="term">Search your favorite recipe</label>
+						<input
+							type="text"
+							name="term"
+							id="term"
+							placeholder="pasta, pizza"
+						/>
+						<button id="search-btn" type="submit">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</div>
+			</section>
+			<section id="meals" class="container"></section>
+		</main>
+		<script src="./js/home.js" type="module"></script>
+	</body>
 </html>
