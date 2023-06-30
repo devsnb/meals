@@ -44,28 +44,25 @@ export const getAllFavorites = () => {
  * @param {*} currentFavs current favorite meals
  * @returns the HTML meal node
  */
-export const createMealCard = (meal, currentFavs) => {
-	const thumbnail = meal.strMealThumb
-	const category = meal.strCategory
-	const mealName = meal.strMeal
-	const mealId = meal.idMeal
-
+export const createMealCard = (meal, currentFavs, isTrash = false) => {
 	const div = document.createElement('div')
 	div.classList.add('meal')
-	div.id = mealId
+	div.id = meal.idMeal
+
+	let icon = `<i class="${
+		currentFavs && currentFavs.includes(meal.idMeal) ? 'fa-solid' : 'fa-regular'
+	} fa-heart favorite"></i>`
 
 	div.innerHTML = `
-    <img src="${thumbnail}" />
+    <img src="${meal.strMealThumb}" />
     <div class="card-content">
       <div>
-        <a href="/details.html?id=${mealId}">
-          <h2>${mealName}</h2>
+        <a href="/details.html?id=${meal.idMeal}">
+          <h2>${meal.strMeal}</h2>
         </a>
-        <p>${category}</p>
+        <p>${meal.strCategory}</p>
       </div>
-      <i class="${
-				currentFavs && currentFavs.includes(mealId) ? 'fa-solid' : 'fa-regular'
-			} fa-heart favorite"></i>
+      ${isTrash ? `<i class="fa-solid fa-trash"></i>` : icon}
     </div>
   `
 

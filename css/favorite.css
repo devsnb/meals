@@ -1,0 +1,55 @@
+.favorites>h2 {
+  color: white;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+#favorites {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.meal {
+  max-width: 290px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.meal a {
+  display: block;
+}
+
+.meal>img {
+  display: block;
+  width: 100%;
+}
+
+.meal>div {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(346, 65%, 42%);
+  padding: 1rem;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content a {
+  color: hsl(346, 65%, 42%);
+  text-decoration: none;
+}
+
+.fa-trash {
+  margin-right: 0.5rem;
+  transform: scale(1.5);
+}
+
+.favorite.active {
+  background-clip: border-box;
+}
